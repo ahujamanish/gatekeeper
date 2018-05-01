@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34443D322098415700053282 /* GateKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34443D312098415700053282 /* GateKeeper.swift */; };
+		34443D35209846C300053282 /* UIViewController+GateKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34443D34209846C300053282 /* UIViewController+GateKeeper.swift */; };
+		34443D372098474400053282 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34443D362098474400053282 /* Home.storyboard */; };
 		34AAE542208F12AF00E7DB7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAE541208F12AF00E7DB7F /* AppDelegate.swift */; };
 		34AAE544208F12AF00E7DB7F /* GateKeeperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAE543208F12AF00E7DB7F /* GateKeeperViewController.swift */; };
 		34AAE547208F12AF00E7DB7F /* GateKeeper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AAE545208F12AF00E7DB7F /* GateKeeper.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34443D312098415700053282 /* GateKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateKeeper.swift; sourceTree = "<group>"; };
+		34443D34209846C300053282 /* UIViewController+GateKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GateKeeper.swift"; sourceTree = "<group>"; };
+		34443D362098474400053282 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		34AAE53E208F12AF00E7DB7F /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AAE541208F12AF00E7DB7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34AAE543208F12AF00E7DB7F /* GateKeeperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateKeeperViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34443D33209846B200053282 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				34443D34209846C300053282 /* UIViewController+GateKeeper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		34AAE535208F12AF00E7DB7F = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +111,15 @@
 		34AAE540208F12AF00E7DB7F /* GateKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				34443D33209846B200053282 /* Helpers */,
 				34AAE541208F12AF00E7DB7F /* AppDelegate.swift */,
 				34AAE543208F12AF00E7DB7F /* GateKeeperViewController.swift */,
 				34AAE545208F12AF00E7DB7F /* GateKeeper.storyboard */,
 				34AAE548208F12B100E7DB7F /* Assets.xcassets */,
 				34AAE54A208F12B100E7DB7F /* LaunchScreen.storyboard */,
 				34AAE54D208F12B100E7DB7F /* Info.plist */,
+				34443D312098415700053282 /* GateKeeper.swift */,
+				34443D362098474400053282 /* Home.storyboard */,
 			);
 			path = GateKeeper;
 			sourceTree = "<group>";
@@ -232,6 +249,7 @@
 				34AAE54C208F12B100E7DB7F /* LaunchScreen.storyboard in Resources */,
 				34AAE549208F12B100E7DB7F /* Assets.xcassets in Resources */,
 				34AAE547208F12AF00E7DB7F /* GateKeeper.storyboard in Resources */,
+				34443D372098474400053282 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				34AAE544208F12AF00E7DB7F /* GateKeeperViewController.swift in Sources */,
+				34443D322098415700053282 /* GateKeeper.swift in Sources */,
 				34AAE542208F12AF00E7DB7F /* AppDelegate.swift in Sources */,
+				34443D35209846C300053282 /* UIViewController+GateKeeper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

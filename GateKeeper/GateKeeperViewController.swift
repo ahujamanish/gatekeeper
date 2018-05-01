@@ -7,19 +7,34 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class GateKeeperViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		self.authenticateWithBiometric()
+	}
+
+	private func authenticateWithBiometric() {
+		guard GateKeeper.shared.biometricType != .none else {
+			return
+		}
+
+		let context = LAContext()
+		context.evaluatePolicy(
+			LAPolicy.deviceOwnerAuthenticationWithBiometrics,
+			localizedReason: "Please authenticate to continue",
+			reply: {(success, error) in
+				if error == nil {
+					self.dismiss(animated: true, completion: nil)
+				}
+		})
+		
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
 	}
-
-
 }
 
