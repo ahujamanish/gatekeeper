@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GateKeeperViewController.swift
 //  GateKeeper
 //
 //  Created by Manish Ahuja on 24/04/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GateKeeperViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
