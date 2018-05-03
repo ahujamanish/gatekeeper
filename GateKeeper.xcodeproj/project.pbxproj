@@ -88,7 +88,6 @@
 				34AAE545208F12AF00E7DB7F /* GateKeeper.storyboard */,
 				34AAE54D208F12B100E7DB7F /* Info.plist */,
 				34443D312098415700053282 /* GateKeeper.swift */,
-				34443D362098474400053282 /* Home.storyboard */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -117,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				34AAE541208F12AF00E7DB7F /* AppDelegate.swift */,
+				34443D362098474400053282 /* Home.storyboard */,
 				342008B720986856002BEF89 /* Source */,
 				34AAE548208F12B100E7DB7F /* Assets.xcassets */,
 				34AAE54A208F12B100E7DB7F /* LaunchScreen.storyboard */,
