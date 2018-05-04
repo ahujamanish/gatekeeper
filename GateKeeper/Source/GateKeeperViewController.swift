@@ -11,11 +11,33 @@ import LocalAuthentication
 
 class GateKeeperViewController: UIViewController {
 
-	@IBOutlet private var errorLabel: UILabel!
+	@IBOutlet private var infoLabel: UILabel!
+	@IBOutlet private var infoImageView: UIImageView!
+	@IBOutlet private var retryButton: UIButton!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.configure()
 		self.authenticateWithBiometric()
+	}
+
+	private func configure() {
+		let bundle = Bundle(for: GateKeeper.self)
+		let image: UIImage?
+		let info: String
+		switch GateKeeper.shared.biometricType {
+		case .faceID:
+			image = UIImage(named: "faceId", in: bundle, compatibleWith: nil)
+			info = "Autheticate using Face ID"
+		case .touchID:
+			image = UIImage(named: "touchId", in: bundle, compatibleWith: nil)
+			info = "Autheticate using Touch ID"
+		default:
+			image = nil
+			info = "Autheticate"
+		}
+		self.infoImageView.image = image
+		self.infoLabel.text = info
 	}
 
 	private func authenticateWithBiometric() {
@@ -23,6 +45,7 @@ class GateKeeperViewController: UIViewController {
 			return
 		}
 
+		self.retryButton.isHidden = true
 		let context = LAContext()
 		context.evaluatePolicy(
 			LAPolicy.deviceOwnerAuthenticationWithBiometrics,
@@ -40,6 +63,7 @@ class GateKeeperViewController: UIViewController {
 						default:
 							self.handleError(message: "User authentication failed")
 						}
+						self.retryButton.isHidden = false
 					} else {
 						self.dismiss(animated: true, completion: nil)
 					}
@@ -49,7 +73,7 @@ class GateKeeperViewController: UIViewController {
 	}
 
 	private func handleError(message: String) {
-		self.errorLabel.text = message
+		self.infoLabel.text = message
 	}
 
 	@IBAction private func retryTapped() {

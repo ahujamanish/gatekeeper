@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GateKeeperViewController" customModule="GateKeeper" customModuleProvider="target">
             <connections>
-                <outlet property="errorLabel" destination="UVf-jb-14n" id="qf5-nQ-VkU"/>
+                <outlet property="infoImageView" destination="rt7-l7-Xdj" id="sbf-Dj-TCK"/>
+                <outlet property="infoLabel" destination="UVf-jb-14n" id="qf5-nQ-VkU"/>
+                <outlet property="retryButton" destination="EXB-mv-qzN" id="1u9-81-nRn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,20 +23,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authenticate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVf-jb-14n">
-                    <rect key="frame" x="138.5" y="323" width="97.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-mv-qzN">
-                    <rect key="frame" x="148" y="394" width="80" height="48"/>
-                    <color key="backgroundColor" red="0.30588235289999999" green="0.2784313725" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="40" y="555" width="295" height="48"/>
+                    <color key="backgroundColor" red="0.16078431369999999" green="0.1450980392" blue="0.23921568630000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="yP2-Gd-YCj"/>
-                        <constraint firstAttribute="width" constant="80" id="zOz-M1-yld"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                     <state key="normal" title="Retry">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -47,15 +42,38 @@
                         <action selector="retryTapped" destination="-1" eventType="touchUpInside" id="Gc8-mx-fWI"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceId" translatesAutoresizingMaskIntoConstraints="NO" id="rt7-l7-Xdj">
+                    <rect key="frame" x="156.5" y="302.5" width="62" height="62"/>
+                    <color key="tintColor" red="0.1764705882" green="0.7725490196" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="crU-Hx-WNv"/>
+                        <constraint firstAttribute="height" constant="62" id="u8t-WR-9xP"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authenticate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVf-jb-14n">
+                    <rect key="frame" x="40" y="382.5" width="295" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" red="0.16078431369999999" green="0.1450980392" blue="0.23921568630000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="EXB-mv-qzN" firstAttribute="top" secondItem="UVf-jb-14n" secondAttribute="bottom" constant="50" id="ADW-AS-hbx"/>
                 <constraint firstItem="UVf-jb-14n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CKC-TJ-YK5"/>
+                <constraint firstItem="rt7-l7-Xdj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MQH-9H-Zix"/>
+                <constraint firstItem="rt7-l7-Xdj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QXu-I5-RKd"/>
+                <constraint firstItem="UVf-jb-14n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="TiO-1z-UVT"/>
+                <constraint firstItem="UVf-jb-14n" firstAttribute="top" secondItem="rt7-l7-Xdj" secondAttribute="bottom" constant="18" id="a7u-06-Krw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UVf-jb-14n" secondAttribute="trailing" constant="40" id="aJd-cn-ogA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EXB-mv-qzN" secondAttribute="bottom" constant="64" id="csW-p6-3dr"/>
                 <constraint firstItem="EXB-mv-qzN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lRB-S6-ww5"/>
-                <constraint firstItem="UVf-jb-14n" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="m4C-pn-Cxe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EXB-mv-qzN" secondAttribute="trailing" constant="40" id="tQn-zK-zzv"/>
+                <constraint firstItem="EXB-mv-qzN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="tjd-md-sXj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="faceId" width="62" height="62"/>
+    </resources>
 </document>

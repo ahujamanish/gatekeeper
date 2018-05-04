@@ -13,7 +13,6 @@
 		34443D35209846C300053282 /* UIViewController+GateKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34443D34209846C300053282 /* UIViewController+GateKeeper.swift */; };
 		34443D372098474400053282 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34443D362098474400053282 /* Home.storyboard */; };
 		34AAE542208F12AF00E7DB7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAE541208F12AF00E7DB7F /* AppDelegate.swift */; };
-		34AAE547208F12AF00E7DB7F /* GateKeeper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AAE545208F12AF00E7DB7F /* GateKeeper.storyboard */; };
 		34AAE549208F12B100E7DB7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AAE548208F12B100E7DB7F /* Assets.xcassets */; };
 		34AAE54C208F12B100E7DB7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AAE54A208F12B100E7DB7F /* LaunchScreen.storyboard */; };
 		34AAE557208F12B100E7DB7F /* GateKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAE556208F12B100E7DB7F /* GateKeeperTests.swift */; };
@@ -45,7 +44,6 @@
 		34443D362098474400053282 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		34AAE53E208F12AF00E7DB7F /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AAE541208F12AF00E7DB7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34AAE546208F12AF00E7DB7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GateKeeper.storyboard; sourceTree = "<group>"; };
 		34AAE548208F12B100E7DB7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34AAE54B208F12B100E7DB7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34AAE54D208F12B100E7DB7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				34443D34209846C300053282 /* UIViewController+GateKeeper.swift */,
-				34AAE545208F12AF00E7DB7F /* GateKeeper.storyboard */,
 				34AAE54D208F12B100E7DB7F /* Info.plist */,
 				34443D312098415700053282 /* GateKeeper.swift */,
 				343248AB209B2ACF008B0398 /* GateKeeperViewController.swift */,
@@ -251,7 +248,6 @@
 			files = (
 				34AAE54C208F12B100E7DB7F /* LaunchScreen.storyboard in Resources */,
 				34AAE549208F12B100E7DB7F /* Assets.xcassets in Resources */,
-				34AAE547208F12AF00E7DB7F /* GateKeeper.storyboard in Resources */,
 				34443D372098474400053282 /* Home.storyboard in Resources */,
 				343248AE209B2ACF008B0398 /* GateKeeperViewController.xib in Resources */,
 			);
@@ -317,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		34AAE545208F12AF00E7DB7F /* GateKeeper.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34AAE546208F12AF00E7DB7F /* Base */,
-			);
-			name = GateKeeper.storyboard;
-			sourceTree = "<group>";
-		};
 		34AAE54A208F12B100E7DB7F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -454,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WFGX5U849;
 				INFOPLIST_FILE = "$(SRCROOT)/GateKeeper/Source/Info.plist";
@@ -472,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WFGX5U849;
 				INFOPLIST_FILE = "$(SRCROOT)/GateKeeper/Source/Info.plist";
