@@ -48,7 +48,7 @@ class GateKeeperViewController: UIViewController {
 		self.retryButton.isHidden = true
 		let context = LAContext()
 		context.evaluatePolicy(
-			LAPolicy.deviceOwnerAuthenticationWithBiometrics,
+			LAPolicy.deviceOwnerAuthentication,
 			localizedReason: "Please authenticate to continue",
 			reply: {(success, error) in
 				DispatchQueue.main.async {

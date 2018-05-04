@@ -22,7 +22,7 @@ open class GateKeeper {
 			let context = LAContext()
 			var error: NSError?
 
-			guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+			guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
 				print(error?.localizedDescription ?? "")
 				return .none
 			}
