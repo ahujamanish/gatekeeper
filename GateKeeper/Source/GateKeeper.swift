@@ -99,13 +99,13 @@ open class GateKeeper {
 			return
 		}
 
-		guard self.enabled else {
+		guard let topmostViewController = UIApplication.shared.keyWindow?.rootViewController?.topMostViewController,
+			(self.enabled && !(topmostViewController is GateKeeperViewController)) else {
 			return
 		}
 
 		let bundle = Bundle(for: GateKeeper.self)
 		let viewController = GateKeeperViewController(nibName: "GateKeeperViewController", bundle: bundle)
-		let topMostViewController = UIApplication.shared.keyWindow?.rootViewController?.topMostViewController
-		topMostViewController?.present(viewController, animated: true, completion: nil)
+		topmostViewController.present(viewController, animated: true, completion: nil)
 	}
 }
