@@ -25,7 +25,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-You can also enable/disable authentication at any point by:
+Also, make sure to add the following entry in your project's Info.plist to provide usage description for Face Id:
+
+```swift
+		<key>NSFaceIDUsageDescription</key>
+		<string>Allow <Your App Name> access to Face Id for Authentication</string>
+```
+
+You can enable/disable authentication at any point by:
 
 ```swift
 ...
