@@ -104,9 +104,8 @@ class GateKeeper {
 		}
 
 		let bundle = Bundle(for: GateKeeper.self)
-		let storyboard = UIStoryboard(name: "GateKeeper", bundle: bundle)
-		let viewController = storyboard.instantiateInitialViewController()
+		let viewController = GateKeeperViewController(nibName: "GateKeeperViewController", bundle: bundle)
 		let topMostViewController = UIApplication.shared.keyWindow?.rootViewController?.topMostViewController
-		topMostViewController?.present(viewController!, animated: true, completion: nil)
+		topMostViewController?.present(viewController, animated: true, completion: nil)
 	}
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GateKeeper'
-  s.version          = '0.2.0'
+  s.version          = '0.1.0'
   s.summary          = 'Plug and Play TouchId/FaceId Authenticator for your app'
  
   s.description      = <<-DESC
