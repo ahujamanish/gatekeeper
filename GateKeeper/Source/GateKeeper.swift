@@ -15,7 +15,7 @@ internal enum BiometricType {
 	case faceID
 }
 
-class GateKeeper {
+open class GateKeeper {
 
 	internal var biometricType: BiometricType {
 		get {
@@ -42,7 +42,7 @@ class GateKeeper {
 		}
 	}
 
-	static let shared = GateKeeper()
+	public static let shared = GateKeeper()
 
 	private init() {
 	}
